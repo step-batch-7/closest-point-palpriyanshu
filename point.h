@@ -13,16 +13,19 @@ Location of organism: [10 94],  Closest food target : [18 76]
 Location of organism: [36 27],  Closest food target : [55 38]
 */
 #include <stdio.h>
+#include <math.h>
+
+#define POINT_LENGTH 5
+#define FIVE_TIMES for (int count = 0; count < POINT_LENGTH; count++)
+#define FOOD_LOCATIONS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}}
+#define ORGANISM_LOCATIONS {{18, 86}, {97, 27}, {69, 7}, {10, 94}, {36, 27}}
+#define IS_FOOD_CLOSER food_distance < distance
 
 typedef struct
 {
   int x;
   int y;
 } Point;
-
-#define FIVE_TIMES for (int count = 0; count < 5; count++)
-#define FOOD_LOCATIONS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}}
-#define ORGANISM_LOCATIONS {{18, 86}, {97, 27}, {69, 7}, {10, 94}, {36, 27}}
 
 double get_distance(Point *org_location, Point *food_location);
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);

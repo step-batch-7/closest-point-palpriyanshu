@@ -1,4 +1,3 @@
-#include <math.h>
 #include "point.h"
 
 double get_distance(Point *org_location, Point *food_location){
@@ -11,10 +10,10 @@ void get_closest_food( Point food_points[], int points_length, Point current_loc
   FIVE_TIMES
   {
     double food_distance = get_distance(&current_location, &food_points[count]);
-    if (food_distance < distance){
+    if (IS_FOOD_CLOSER)
+    {
       distance = food_distance;
-      closest_food_location->x = food_points[count].x;
-      closest_food_location->y = food_points[count].y;
+      *closest_food_location = food_points[count];
     }
   }
 }
