@@ -16,11 +16,8 @@ Location of organism: [36 27],  Closest food target : [55 38]
 #include <math.h>
 
 #define POINT_LENGTH 5
-#define FIVE_TIMES for (int count = 0; count < POINT_LENGTH; count++)
 #define FOOD_LOCATIONS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}}
 #define ORGANISM_LOCATIONS {{18, 86}, {97, 27}, {69, 7}, {10, 94}, {36, 27}}
-#define IS_FOOD_CLOSER current_food_distance < closer_food_distance
-#define CLOSEST_FOOD_LOCATION_IS_CURRENT_FOOD_LOCATION  *closest_food_location = food_points[count]
 
 typedef struct
 {

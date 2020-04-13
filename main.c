@@ -5,7 +5,7 @@ int main(void)
  Point food_points[] =FOOD_LOCATIONS;
  Point organism_locations[] = ORGANISM_LOCATIONS;
 
- FIVE_TIMES
+ for (int count = 0; count < POINT_LENGTH; count++)
  {
   Point current_location = organism_locations[count];
   Point closest_food_location = food_points[0];

@@ -7,13 +7,13 @@ double get_distance(Point org_location, Point food_location){
 void get_closest_food( Point food_points[], int points_length, Point current_location, Point *closest_food_location)
 {
   double closer_food_distance = get_distance(current_location, food_points[0]);
-  FIVE_TIMES
+  for (int count = 0; count < POINT_LENGTH; count++)
   {
     double current_food_distance = get_distance(current_location, food_points[count]);
-    if(IS_FOOD_CLOSER)
+    if(current_food_distance < closer_food_distance)
     {
       closer_food_distance = current_food_distance;
-      CLOSEST_FOOD_LOCATION_IS_CURRENT_FOOD_LOCATION;
+      *closest_food_location = food_points[count];
     }
   }
 }
